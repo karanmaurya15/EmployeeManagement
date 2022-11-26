@@ -4,16 +4,13 @@
     {
         public const int IS_FULL_TIME = 1;
         public const int IS_PART_TIME = 2;
-        public const int EMP_RATE_PER_HOUR = 150;
-        public const int NUM_OF_WORKING_DAYS = 20;
-        public const int MAX_HRS_IN_MONTH = 100;
-
-        public static int ComputeEmpWage()
+      
+        public static int ComputeEmpWage(string companyname, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
             int empHrs = 0;
             int totalEmpHrs = 0;
             int totalWorkingDays = 0;
-            while (totalEmpHrs <= MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
+            while (totalEmpHrs <= maxHoursPerMonth && totalWorkingDays < numOfWorkingDays)
             {
                 totalWorkingDays++;
                 Random random = new Random();
@@ -33,15 +30,17 @@
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Day : " + totalWorkingDays + "- Employee Hrs : " + empHrs);
             }
-            int totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
-            Console.WriteLine("\nTotal Employee Wage: " + totalEmpWage);
+            int totalEmpWage = totalEmpHrs * empRatePerHour;
+            Console.WriteLine("\nTotal Emp Wage for company " + companyname + " is: " + totalEmpWage);
             return totalEmpWage;
         }
         static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Employee Wage Computation Program\n"); 
-            Program.ComputeEmpWage();
-           
+            Console.WriteLine("Welcome to Employee Wage Computation Program\n");
+            ComputeEmpWage("Microsoft", 100, 20, 100);
+            Console.WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ComputeEmpWage("Google", 200, 20, 150);
+
         }
     }
 }
