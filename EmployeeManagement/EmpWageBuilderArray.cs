@@ -13,10 +13,12 @@ namespace EmployeeManagement
 
         private int numOfCompany = 0;
         private CompanyEmpWage[] companyEmpWageArray;
+        private List<CompanyEmpWage> companyEmpWageArrayList;
 
         public EmpWageBuilderArray()
         {
             this.companyEmpWageArray = new CompanyEmpWage[5];
+            companyEmpWageArrayList = new List<CompanyEmpWage>();
         }
 
         public void addcompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
