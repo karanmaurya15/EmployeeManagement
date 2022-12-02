@@ -8,8 +8,7 @@ namespace EmployeeManagement
 {
     internal class EmpWageBuilderArray
     {
-        public const int IS_FULL_TIME = 1;
-        public const int IS_PART_TIME = 2;
+        public const int IS_FULL_TIME = 1,  IS_PART_TIME = 2;
 
         private int numOfCompany = 0;
         private CompanyEmpWage[] companyEmpWageArray;
@@ -59,6 +58,8 @@ namespace EmployeeManagement
                 }
                 totalEmpHrs += empHrs;
                 Console.WriteLine("Days : " + totalWorkingDays + "Emp Hrs : " + empHrs);
+                int dailyWage = empHrs * companyEmpWage.empRatePerHour;
+                Console.WriteLine("Daily Wage Of Employee Is : " + dailyWage);
             }
             return totalEmpHrs * companyEmpWage.empRatePerHour;
         }

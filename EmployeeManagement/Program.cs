@@ -4,7 +4,7 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter a Company Name: ");
+            Console.WriteLine("Enter a Company Name : ");
             string companyname = Console.ReadLine();
 
             Console.WriteLine("Enter Employee Rate Per Hour: ");
