@@ -5,13 +5,13 @@
         
         static void Main(string[] args)
         {
-            EmpWageBuilderObject Microsoft = new EmpWageBuilderObject("Microsoft", 100, 20, 100);
-            EmpWageBuilderObject Google = new EmpWageBuilderObject("Google", 200, 30, 150);
-            Microsoft.computeEmpWage();
-            Console.WriteLine(Microsoft.toString());
-            Google.computeEmpWage();
-            Console.WriteLine(Google.toString());
 
+            EmpWageBuilderArray empWageBuilder = new EmpWageBuilderArray();
+            empWageBuilder.addcompanyEmpWage("Airtel", 30, 20, 100);
+            empWageBuilder.addcompanyEmpWage("TCS", 40, 20, 200);
+            empWageBuilder.addcompanyEmpWage("Wipro", 25, 20, 120);
+            empWageBuilder.addcompanyEmpWage("Cipla", 20, 20, 150);
+            empWageBuilder.ComputeEmpWage();
         }
     }
 }
