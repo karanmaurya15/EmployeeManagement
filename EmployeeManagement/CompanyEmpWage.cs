@@ -8,15 +8,15 @@ namespace EmployeeManagement
 {
     internal class CompanyEmpWage
     {
-        public string company;
+        public string companyname;
         public int empRatePerHour;
         public int numOfWorkingDays;
         public int maxHoursPerMonth;
         public int totalEmpWage;
 
-        public CompanyEmpWage(string company, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
+        public CompanyEmpWage(string companyname, int empRatePerHour, int numOfWorkingDays, int maxHoursPerMonth)
         {
-            this.company = company;
+            this.companyname = companyname;
             this.empRatePerHour = empRatePerHour;
             this.numOfWorkingDays = numOfWorkingDays;
             this.maxHoursPerMonth = maxHoursPerMonth;
@@ -29,7 +29,7 @@ namespace EmployeeManagement
 
         public string ToString()
         {
-            return "Total Emp Wage of " + this.company + " is " + this.totalEmpWage + "\n";
+            return "Total Emp Wage of " + this.companyname + " is " + this.totalEmpWage;
         }
     }
 }
